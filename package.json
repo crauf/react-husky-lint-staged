@@ -17,8 +17,14 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
     "prettier:fix": "prettier --write",
     "prettier:check": "prettier --check ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix"
+    }
   },
   "lint-staged": {
     "src/*.{js, jsx}": [
